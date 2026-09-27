@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfaf6;
+  --foreground: #2d3748;
+  --sage-50: #f4f9f7;
+  --sage-100: #e6f0eb;
+  --sage-500: #81b29a;
+  --sage-600: #6d9c84;
+  --sage-700: #59856d;
+  --terracotta-50: #fdf3f0;
+  --terracotta-100: #fce4dc;
+  --terracotta-500: #e07a5f;
+  --terracotta-600: #c9674f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+  --color-sage-700: var(--sage-700);
+  --color-terracotta-50: var(--terracotta-50);
+  --color-terracotta-100: var(--terracotta-100);
+  --color-terracotta-500: var(--terracotta-500);
+  --color-terracotta-600: var(--terracotta-600);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
