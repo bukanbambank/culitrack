@@ -8,8 +8,6 @@ const nextConfig: NextConfig = {
     },
   },
   serverExternalPackages: [],
-  // @ts-ignore
-  middlewareClientMaxBodySize: '50mb',
 };
 
 export default nextConfig;
