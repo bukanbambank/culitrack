@@ -11,11 +11,13 @@ export default async function Home() {
   }
 
   // Fetch profile to determine role
-  const { data: profile } = await supabase
+  const { data } = await supabase
     .from('profiles')
     .select('role')
     .eq('id', user.id)
     .single()
+
+  const profile = data as any
 
   if (profile?.role === 'admin') {
     redirect('/admin')
