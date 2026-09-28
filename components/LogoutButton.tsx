@@ -2,8 +2,9 @@
 
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
+import { Button } from '@/components/ui/button'
 
-export function LogoutButton() {
+export function LogoutButton({ className }: { className?: string }) {
   const router = useRouter()
   const supabase = createClient()
 
@@ -14,11 +15,12 @@ export function LogoutButton() {
   }
 
   return (
-    <button
+    <Button
+      variant="destructive"
       onClick={handleLogout}
-      className="text-sm bg-red-50 text-red-600 hover:bg-red-100 px-4 py-2 rounded-md font-medium transition-colors"
+      className={className}
     >
       Logout
-    </button>
+    </Button>
   )
 }

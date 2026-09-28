@@ -45,8 +45,8 @@ export default function DashboardClient({ kelasList, materiList }: DashboardClie
     <div className="space-y-10 mt-10">
       {/* SECTION: Kelas Saya */}
       <section>
-        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center gap-2 border-l-4 border-sage-500 pl-3">
-          <Users className="w-6 h-6 text-sage-600" />
+        <h2 className="text-xl sm:text-2xl font-black text-gray-900 mb-6 flex items-center gap-2 border-l-4 border-primary pl-3">
+          <Users className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
           Kelas Saya
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -61,16 +61,16 @@ export default function DashboardClient({ kelasList, materiList }: DashboardClie
                   {kelas.murids.length} Murid
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <button 
                   onClick={() => setSelectedKelasMurid(kelas)}
-                  className="flex-1 py-2 text-sm font-bold text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                  className="w-full sm:flex-1 py-2 text-sm font-bold text-gray-600 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   Lihat Murid
                 </button>
                 <Link 
                   href={`/mapel?kelasId=${kelas.id_kelas}`}
-                  className="flex-1 py-2 text-sm font-bold text-center text-white bg-sage-600 rounded-lg hover:bg-sage-700 transition-colors flex items-center justify-center gap-1"
+                  className="w-full sm:flex-1 py-2 text-sm font-bold text-center text-primary-foreground bg-primary rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-1"
                 >
                   <Play className="w-4 h-4" /> Nilai Kelas Ini
                 </Link>
@@ -87,8 +87,8 @@ export default function DashboardClient({ kelasList, materiList }: DashboardClie
 
       {/* SECTION: Materi Praktik */}
       <section>
-        <h2 className="text-2xl font-black text-gray-900 mb-6 flex items-center gap-2 border-l-4 border-sage-500 pl-3">
-          <BookOpen className="w-6 h-6 text-sage-600" />
+        <h2 className="text-xl sm:text-2xl font-black text-gray-900 mb-6 flex items-center gap-2 border-l-4 border-primary pl-3">
+          <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
           Materi Praktik per Kelas
         </h2>
         <div className="bg-white rounded-2xl shadow-sm border overflow-hidden">
@@ -124,7 +124,7 @@ export default function DashboardClient({ kelasList, materiList }: DashboardClie
                           </div>
                           <Link
                             href={`/murid?kelasId=${kelas.id_kelas}&materiId=${materi.id_materi}`}
-                            className="inline-flex items-center justify-center gap-1 px-5 py-2.5 text-sm font-bold text-sage-700 bg-sage-50 border border-sage-200 rounded-lg hover:bg-sage-600 hover:text-white hover:border-sage-600 transition-all whitespace-nowrap"
+                            className="w-full sm:w-auto mt-3 sm:mt-0 inline-flex items-center justify-center gap-1 px-5 py-2.5 text-sm font-bold text-primary bg-primary/10 border border-primary/20 rounded-lg hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all whitespace-nowrap"
                           >
                             <Star className="w-4 h-4" /> Mulai Nilai
                           </Link>
