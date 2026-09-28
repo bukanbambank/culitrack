@@ -67,18 +67,18 @@ export default async function PenilaianPage({
     <div className="max-w-4xl mx-auto p-4">
       {/* Header Info */}
       <div className="bg-white rounded-2xl shadow-sm border p-6 mb-6">
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-800 mb-1">{murid.nama_murid}</h1>
+        <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+          <div className="w-full sm:w-auto break-words">
+            <h1 className="text-2xl font-bold text-gray-800 mb-2 leading-tight">{murid.nama_murid}</h1>
             <div className="text-gray-500 flex flex-wrap gap-x-4 gap-y-1 text-sm">
               <p><span className="font-medium text-gray-700">Kelas:</span> {kelas?.nama_kelas}</p>
               <p><span className="font-medium text-gray-700">Mapel:</span> {materi.mata_pelajaran}</p>
             </div>
           </div>
-          <div className="text-right">
+          <div className="w-full sm:w-auto text-left sm:text-right bg-gray-50 sm:bg-transparent p-3 sm:p-0 rounded-lg sm:rounded-none">
             <p className="text-sm font-medium text-gray-500">Materi & Menu</p>
             <p className="font-semibold text-gray-800">{materi.materi_praktik}</p>
-            <p className="text-sage-600">{materi.menu_praktik}</p>
+            <p className="text-primary font-medium">{materi.menu_praktik}</p>
           </div>
         </div>
       </div>
@@ -86,19 +86,19 @@ export default async function PenilaianPage({
       {/* The Form or Display */}
       {existingPenilaian ? (
         <div className="bg-white rounded-2xl shadow-sm border p-8">
-          <div className="mb-6 pb-6 border-b flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+          <div className="mb-6 pb-6 border-b flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
+            <div className="flex items-start sm:items-center gap-3">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 shrink-0 bg-green-100 text-green-600 rounded-full flex items-center justify-center mt-1 sm:mt-0">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
               </div>
               <div>
                 <h2 className="text-xl font-bold text-gray-800">Sudah Dinilai</h2>
-                <p className="text-gray-500 text-sm">Murid ini sudah mendapatkan nilai untuk materi ini.</p>
+                <p className="text-gray-500 text-sm mt-1 sm:mt-0">Murid ini sudah mendapatkan nilai untuk materi ini.</p>
               </div>
             </div>
-            <div className="text-right bg-sage-50 px-4 py-2 rounded-xl border border-sage-100">
-              <p className="text-sm font-medium text-sage-600 mb-1">Nilai Akhir</p>
-              <p className="text-4xl font-bold text-sage-700">{Number(existingPenilaian.nilai_akhir).toFixed(2)}</p>
+            <div className="w-full sm:w-auto text-center sm:text-right bg-primary/10 px-6 py-3 rounded-xl border border-primary/20">
+              <p className="text-sm font-medium text-primary mb-1">Nilai Akhir</p>
+              <p className="text-4xl font-bold text-primary">{Number(existingPenilaian.nilai_akhir).toFixed(2)}</p>
             </div>
           </div>
 
@@ -150,10 +150,10 @@ export default async function PenilaianPage({
             </div>
           </div>
           
-          <div className="mt-8 pt-6 border-t flex justify-end">
+          <div className="mt-8 pt-6 border-t flex flex-col sm:flex-row justify-end gap-3">
             <Link 
               href={`/murid?kelasId=${murid.id_kelas}&materiId=${materi.id_materi}`}
-              className="px-6 py-2.5 bg-sage-600 text-white font-medium rounded-lg hover:bg-sage-700 transition-colors"
+              className="w-full sm:w-auto text-center px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors"
             >
               Kembali ke Daftar Murid
             </Link>

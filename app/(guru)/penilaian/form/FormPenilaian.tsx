@@ -310,11 +310,11 @@ export default function FormPenilaian({ murid, kelas, materi }: FormPenilaianPro
           </div>
         </div>
 
-        <div className="flex justify-end pt-4">
+        <div className="flex flex-col sm:flex-row justify-end pt-4">
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-8 py-3 bg-sage-600 text-white font-medium rounded-lg hover:bg-sage-700 disabled:opacity-50 transition-colors"
+            className="w-full sm:w-auto px-8 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-colors"
           >
             {isSubmitting ? 'Menyimpan...' : 'Simpan Penilaian'}
           </button>
