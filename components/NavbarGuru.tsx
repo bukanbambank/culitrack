@@ -65,12 +65,14 @@ export function NavbarGuru() {
             {/* Mobile menu sheet */}
             <div className="flex items-center sm:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-gray-900">
-                    <span className="sr-only">Buka menu utama</span>
-                    <Menu className="h-6 w-6" />
-                  </Button>
-                </SheetTrigger>
+                <SheetTrigger 
+                  render={
+                    <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-gray-900">
+                      <span className="sr-only">Buka menu utama</span>
+                      <Menu className="h-6 w-6" />
+                    </Button>
+                  }
+                />
                 <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                   <SheetHeader className="text-left mb-6">
                     <SheetTitle className="flex items-center space-x-2">
