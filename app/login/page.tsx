@@ -137,7 +137,7 @@ export default function LoginPage() {
                       Memproses...
                     </>
                   ) : (
-                    'Masuk ke Dashboard'
+                    'Masuk'
                   )}
                 </Button>
               </form>
@@ -146,7 +146,6 @@ export default function LoginPage() {
 
           {/* Footer Text */}
           <div className="mt-8 flex flex-col items-center gap-2 text-center text-xs text-muted-foreground">
-            <p>Lupa password? Hubungi admin sekolah</p>
             <p>&copy; 2026 CuliTrack</p>
           </div>
         </div>
